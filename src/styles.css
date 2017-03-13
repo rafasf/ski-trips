@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/pure-min.css';
+
+html, body, input {
+    color: #111;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+.app-header {
+    background-color: #85144b;
+    margin-bottom: 5px;
+    padding: 8px;
+}
+
+.app-header .pure-menu-heading {
+    color: #FF851B;
+}
+
+.app-header .pure-menu-link {
+    color: #fff;
+}
+
+.app-header .pure-menu-link:hover {
+    background-color: #85144b;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+.resort {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.resort:hover {
+    background-color: #ddd;
+}
+
+.resort small {
+    font-style: italic;
+}

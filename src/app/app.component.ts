@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <header class="pure-menu pure-menu-horizontal app-header">
+      <nav>
+        <span class="pure-menu-heading">Resorts</span>
+      </nav>
+    </header>
+    <section class="pure-form pure-form-aligned">
+        <origin (originChanged)="updateOrigin($event)"></origin>
+        <schedule (scheduleChanged)="updateSchedule($event)"></schedule>
+    </section>
+    <resorts [origin]="origin" [schedule]="schedule"></resorts>`
 })
 export class AppComponent {
-  title = 'app works!';
+  origin: any;
+  schedule: any;
+
+  updateOrigin(newEvent) {
+    this.origin = newEvent;
+  }
+
+  updateSchedule(newSchedule) {
+    this.schedule = newSchedule;
+  }
 }
