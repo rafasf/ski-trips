@@ -12,6 +12,7 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
       </section>
       <a
         [ngClass]="{'pure-button-disabled': !searchLink}"
+        target="_blank"
         class="pure-button pure-button-primary flight-link"
         href="{{ searchLink }}">Find ></a>
     </li>`
