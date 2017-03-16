@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   template: `
     <header class="pure-menu pure-menu-horizontal app-header">
       <nav>
-        <span class="pure-menu-heading">Resorts</span>
+        <span class="pure-menu-heading">Find your Flight!</span>
       </nav>
     </header>
     <section class="pure-form pure-form-stacked search">
