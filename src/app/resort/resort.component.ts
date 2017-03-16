@@ -5,12 +5,14 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
   template: `
     <li
       class="resort">
-      <h2>{{ resort.name }}</h2>
-      <a href="{{ resort.url }}"><small>{{ resort.url }}</small></a>
-      <p>Airport(s): {{ resort.airports }}</p>
+      <section>
+         <h2>{{ resort.name }}</h2>
+         <a href="{{ resort.url }}"><small>{{ resort.url }}</small></a>
+         <p>Airport(s): {{ resort.airports }}</p>
+      </section>
       <a
+        [ngClass]="{'pure-button-disabled': !searchLink}"
         class="pure-button pure-button-primary flight-link"
-        *ngIf="searchLink"
         href="{{ searchLink }}">Check Available Flights</a>
     </li>`
 })

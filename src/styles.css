@@ -47,8 +47,16 @@ ul {
 }
 
 .resort {
+  position: relative;
   border-bottom: 1px solid #ddd;
   padding: 15px;
+}
+
+.resort .flight-link {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .resort:hover {
