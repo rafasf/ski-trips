@@ -4,14 +4,10 @@ import {Component, Output, EventEmitter} from '@angular/core';
   selector: 'schedule',
   template: `
     <section class="schedule">
-      <div class="pure-control-group">
-        <label for="departure-date">Departure Date:</label>
-        <input type="date" name="departure-date" (change)="changeDepartureDate($event)" />
-      </div>
-      <div class="pure-control-group">
-        <label for="return-date">Return Date:</label>
-        <input type="date" name="return-date" (change)="changeReturnDate($event)" />
-      </div>
+      <label for="departure-date">Departure Date</label>
+      <input type="date" name="departure-date" class="pure-input-1" (change)="changeDepartureDate($event)" />
+      <label for="return-date">Return Date</label>
+      <input type="date" name="return-date" class="pure-input-1" (change)="changeReturnDate($event)" />
     </section>`
 })
 export class ScheduleComponent {

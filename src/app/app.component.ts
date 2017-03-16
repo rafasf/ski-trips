@@ -8,9 +8,9 @@ import {Component} from '@angular/core';
         <span class="pure-menu-heading">Resorts</span>
       </nav>
     </header>
-    <section class="pure-form pure-form-aligned">
-        <origin (originChanged)="updateOrigin($event)"></origin>
-        <schedule (scheduleChanged)="updateSchedule($event)"></schedule>
+    <section class="pure-form pure-form-stacked search">
+      <origin (originChanged)="updateOrigin($event)"></origin>
+      <schedule (scheduleChanged)="updateSchedule($event)"></schedule>
     </section>
     <resorts [origin]="origin" [schedule]="schedule"></resorts>`
 })

@@ -1,52 +1,60 @@
 @import './assets/pure-min.css';
 
 html, body, input {
-    color: #111;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+  color: #111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 body, h1, h2, ul, li, p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a, a:link, a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .app-header {
-    background-color: #85144b;
-    margin-bottom: 5px;
-    padding: 8px;
+  background-color: #85144b;
+  margin-bottom: 5px;
+  padding: 8px;
 }
 
 .app-header .pure-menu-heading {
-    color: #FF851B;
+  color: #FF851B;
 }
 
 .app-header .pure-menu-link {
-    color: #fff;
+  color: #fff;
 }
 
 .app-header .pure-menu-link:hover {
-    background-color: #85144b;
-    text-decoration: underline;
+  background-color: #85144b;
+  text-decoration: underline;
+}
+
+.search {
+  padding: 0 15px;
+}
+
+.search label {
+  font-weight: bold;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .resort {
-    border-bottom: 1px solid #ddd;
-    padding: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
 }
 
 .resort:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .resort small {
-    font-style: italic;
+  font-style: italic;
 }
