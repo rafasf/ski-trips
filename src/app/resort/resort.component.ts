@@ -13,7 +13,7 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
       <a
         [ngClass]="{'pure-button-disabled': !searchLink}"
         class="pure-button pure-button-primary flight-link"
-        href="{{ searchLink }}">Check Available Flights</a>
+        href="{{ searchLink }}">Find ></a>
     </li>`
 })
 export class ResortComponent implements OnChanges {
