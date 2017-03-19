@@ -1,5 +1,12 @@
 @import './assets/pure-min.css';
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html, body, input {
   color: #111;
   font-family: "Open Sans", sans-serif;

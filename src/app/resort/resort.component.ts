@@ -14,7 +14,7 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
         [ngClass]="{'pure-button-disabled': !searchLink}"
         target="_blank"
         class="pure-button pure-button-primary flight-link"
-        href="{{ searchLink }}">Find ></a>
+        href="{{ searchLink }}">See Flights</a>
     </li>`
 })
 export class ResortComponent implements OnChanges {
