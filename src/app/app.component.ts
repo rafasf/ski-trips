@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Alliance} from './alliance/alliance';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,16 @@ import {Component} from '@angular/core';
     <section class="pure-form pure-form-stacked search">
       <origin (originChanged)="updateOrigin($event)"></origin>
       <schedule (scheduleChanged)="updateSchedule($event)"></schedule>
+      <alliance [(alliance)]="alliance"></alliance>
     </section>
-    <resorts [origin]="origin" [schedule]="schedule"></resorts>`
+    <resorts
+      [origin]="origin"
+      [schedule]="schedule"
+      [alliance]="alliance">
+    </resorts>`
 })
 export class AppComponent {
+  alliance: Alliance;
   origin: any;
   schedule: any;
 

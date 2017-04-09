@@ -8,6 +8,7 @@ import {OriginComponent} from './origin/origin.component';
 import {ResortsComponent} from './resort/resorts.component';
 import {ResortComponent} from './resort/resort.component';
 import {ScheduleComponent} from './schedule/schedule.component';
+import {AllianceComponent} from './alliance/alliance.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ScheduleComponent} from './schedule/schedule.component';
     OriginComponent,
     ResortComponent,
     ResortsComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    AllianceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
+import {Alliance} from './../alliance/alliance';
 
 @Component({
   selector: 'resort',
@@ -21,6 +22,7 @@ export class ResortComponent implements OnChanges {
   @Input() resort: any;
   @Input() origin: any;
   @Input() schedule: any;
+  @Input() alliance: Alliance;
 
   searchLink: string;
 
@@ -29,23 +31,32 @@ export class ResortComponent implements OnChanges {
       this.searchLink = this.searchLinkFor(
         this.origin,
         this.resort.airports,
-        this.schedule);
+        this.schedule,
+        this.alliance);
     } else {
       this.searchLink = '';
     }
   }
 
-  private searchLinkFor(origins: any, destinations: any, schedule: any): string {
+  private searchLinkFor(
+    origins: any,
+    destinations: any,
+    schedule: any,
+    alliance: Alliance
+  ): string {
     const {departureDate, returnDate} = schedule;
+    const selectedAlliance = alliance !== undefined ? [`a=${alliance.code}`] : [];
+
     const searchParams = [
       '#search',
       `f=${origins}`,
       `t=${destinations}`,
       `d=${departureDate}`,
       `r=${returnDate}`,
-      `a=STAR_ALLIANCE`,
-      'mc=m'
-    ].join(';')
+      'mc=m']
+      .concat(selectedAlliance)
+      .join(';')
+
     return `https://www.google.com/flights/${searchParams}`
   }
 }

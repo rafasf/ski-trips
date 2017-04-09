@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {ResortComponent} from './resort.component';
+import {Alliance} from './../alliance/alliance';
 
 @Component({
   selector: 'resorts',
@@ -9,12 +10,15 @@ import {ResortComponent} from './resort.component';
       *ngFor="let resort of resorts"
       [resort]="resort"
       [origin]="origin"
-      [schedule]="schedule"></resort>
+      [schedule]="schedule"
+      [alliance]="alliance">
+      </resort>
   </ul>`
 })
 export class ResortsComponent {
   @Input() origin: any;
   @Input() schedule: any;
+  @Input() alliance: Alliance;
 
   resorts: Array<any>;
 
