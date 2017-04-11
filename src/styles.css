@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -20,6 +21,12 @@ body, h1, h2, ul, li, p {
 
 a, a:link, a:visited {
   text-decoration: none;
+}
+
+input[type="date"] {
+  display:block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .app-header {
