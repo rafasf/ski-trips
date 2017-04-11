@@ -22,7 +22,8 @@ export class AllianceComponent {
   @Output() allianceChange = new EventEmitter<Alliance>();
 
   alliances: Array<Alliance> = [
-    {name: 'Star Alliance', code: 'STAR_ALLIANCE'},
-    {name: 'Oneworld', code: 'ONEWORLD'}
+    {name: 'Oneworld', code: 'ONEWORLD'},
+    {name: 'SkyTeam', code: 'SKYTEAM'},
+    {name: 'Star Alliance', code: 'STAR_ALLIANCE'}
   ]
 }
