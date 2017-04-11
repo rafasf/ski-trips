@@ -1,4 +1,4 @@
 export class Alliance {
-  name: string,
+  name: string
   code: string
 }
