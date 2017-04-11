@@ -6,21 +6,25 @@ import {AllianceComponent} from './alliance.component';
 describe('Alliance Component', () => {
   let fixture: ComponentFixture<AllianceComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [FormsModule],
-      declarations: [AllianceComponent]
-    });
+  beforeEach(async(() => {
+    TestBed
+      .configureTestingModule({
+        imports: [FormsModule],
+        declarations: [AllianceComponent]
+      })
+      .compileComponents();
 
     fixture = TestBed.createComponent(AllianceComponent);
-  });
+  }));
 
   it('lists available alliances', () => {
     fixture.detectChanges();
 
-    let alliances = fixture.debugElement.query(By.css('option'));
+    let alliances = fixture.debugElement.query(By.css('select'));
+    let options = alliances.children
+      .map(alliance => alliance.nativeElement.textContent.trim());
 
-    expect(alliances).toEqual([]);
+    expect(options).toEqual(['All', 'Star Alliance', 'Oneworld']);
   });
 
 });
