@@ -2,6 +2,7 @@ import {async, inject, ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {DebugElement, SimpleChange} from '@angular/core';
 import {ResortComponent} from './resort.component';
+import {Origin} from '../origin/origin';
 
 describe('ResortComponent', () => {
   let fixture: ComponentFixture<ResortComponent>;
@@ -59,7 +60,7 @@ describe('ResortComponent', () => {
     });
 
     it('shows link if origin and schedule are available', async(() => {
-      fixture.componentInstance.origin = 'JFK';
+      fixture.componentInstance.origin = Origin.from('JFK');
       fixture.componentInstance.schedule = {
         departureDate: '2016-01-02',
         returnDate: '2016-02-02'

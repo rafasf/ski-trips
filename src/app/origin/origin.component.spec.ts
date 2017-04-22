@@ -2,6 +2,7 @@ import {async, inject, ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {DebugElement, SimpleChange} from '@angular/core';
 import {OriginComponent} from './origin.component';
+import {Origin} from './origin';
 
 describe('Origin Component', () => {
   let fixture: ComponentFixture<OriginComponent>;
@@ -26,7 +27,7 @@ describe('Origin Component', () => {
 
     it('publishes the new value', done => {
       fixture.componentInstance.originChanged.subscribe(value => {
-        expect(value).toEqual('JFK');
+        expect(value).toEqual(Origin.from('JFK'));
         done();
       });
 
