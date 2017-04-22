@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import {ResortComponent} from './resort.component';
 import {Alliance} from './../alliance/alliance';
 import {Origin} from './../origin/origin';
+import {Schedule} from './../schedule/schedule';
 
 @Component({
   selector: 'resorts',
@@ -18,7 +19,7 @@ import {Origin} from './../origin/origin';
 })
 export class ResortsComponent {
   @Input() origin: Origin;
-  @Input() schedule: any;
+  @Input() schedule: Schedule;
   @Input() alliance: Alliance;
 
   resorts: Array<any>;

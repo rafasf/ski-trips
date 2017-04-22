@@ -5,9 +5,17 @@ import {Component, Output, EventEmitter} from '@angular/core';
   template: `
     <section class="schedule">
       <label for="departure-date">Departure Date</label>
-      <input type="date" name="departure-date" class="pure-input-1" (change)="changeDepartureDate($event)" />
+      <input
+        type="date"
+        name="departure-date"
+        class="pure-input-1"
+        (change)="changeDepartureDate($event)" />
       <label for="return-date">Return Date</label>
-      <input type="date" name="return-date" class="pure-input-1" (change)="changeReturnDate($event)" />
+      <input
+        type="date"
+        name="return-date"
+        class="pure-input-1"
+        (change)="changeReturnDate($event)" />
     </section>`
 })
 export class ScheduleComponent {

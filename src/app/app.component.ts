@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Alliance} from './alliance/alliance';
-import {Origin} from './origin';
+import {Origin} from './origin/origin';
+import {Schedule} from './schedule/schedule';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,7 @@ import {Origin} from './origin';
 export class AppComponent {
   alliance: Alliance;
   origin: Origin;
-  schedule: any;
+  schedule: Schedule;
 
   updateOrigin(newOrigin) {
     this.origin = newOrigin;
