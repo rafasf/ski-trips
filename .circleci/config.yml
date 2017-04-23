@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/ski-trips
+    docker:
+      - image: node
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Tests
+          command: npm run test
+      - run:
+          name: Create Bundle
+          command: node_modules/.bin/ng build --prod --base-href "https://rafasf.github.io/ski-trips/"
+      - deploy:
+          name: Push to GitHub Pages
+          command: node_modules/.bin/angular-cli-ghpages
