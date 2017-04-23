@@ -1,18 +1,10 @@
 export class Schedule {
-  private _departureDate: string;
-  private _returnDate: string;
+  readonly departureDate: string;
+  readonly returnDate: string;
 
   private constructor(departureDate, returnDate) {
-    this._departureDate = departureDate;
-    this._returnDate = returnDate;
-  }
-
-  departureDate(): string {
-    return this._departureDate;
-  }
-
-  returnDate(): string {
-    return this._returnDate;
+    this.departureDate = departureDate;
+    this.returnDate = returnDate;
   }
 
   static from(departureDate: string, returnDate: string): Schedule {

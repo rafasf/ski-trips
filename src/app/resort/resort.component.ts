@@ -2,6 +2,7 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core'
 import {Alliance} from './../alliance/alliance';
 import {Origin} from './../origin/origin';
 import {Schedule} from './../schedule/schedule';
+import {Resort} from './resort';
 
 @Component({
   selector: 'resort',
@@ -21,9 +22,9 @@ import {Schedule} from './../schedule/schedule';
     </li>`
 })
 export class ResortComponent implements OnChanges {
-  @Input() resort: any;
+  @Input() resort: Resort;
   @Input() origin: Origin;
-  @Input() schedule: Shedule;
+  @Input() schedule: Schedule;
   @Input() alliance: Alliance;
 
   searchLink: string;
@@ -42,7 +43,7 @@ export class ResortComponent implements OnChanges {
 
   private searchLinkFor(
     origins: Origin,
-    destinations: any,
+    destinations: Array<string>,
     schedule: Schedule,
     alliance: Alliance
   ): string {

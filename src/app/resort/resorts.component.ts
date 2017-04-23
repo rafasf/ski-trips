@@ -3,6 +3,7 @@ import {ResortComponent} from './resort.component';
 import {Alliance} from './../alliance/alliance';
 import {Origin} from './../origin/origin';
 import {Schedule} from './../schedule/schedule';
+import {Resort} from './resort';
 
 @Component({
   selector: 'resorts',
@@ -22,94 +23,81 @@ export class ResortsComponent {
   @Input() schedule: Schedule;
   @Input() alliance: Alliance;
 
-  resorts: Array<any>;
+  resorts: Array<Resort>;
 
   constructor() {
     const resorts = [
-      {
-        "name": "Snowbird",
-        "url": "http://www.snowbird.com",
-        "airports": ["SLC"]
-      },
-      {
-        "name": "Alta",
-        "url": "http://www.alta.com",
-        "airports": ["SLC"]
-      },
-      {
-        "name": "Aspen Snowmass",
-        "url": "https://www.aspensnowmass.com",
-        "airports": ["ASE"]
-      },
-      {
-        "name": "Jackson Hole",
-        "url": "http://www.jacksonhole.com",
-        "airports": ["JAC"]
-      },
-      {
-        "name": "Mammoth",
-        "url": "http://www.mammothmountain.com",
-        "airports": ["MMH"]
-      },
-      {
-        "name": "Revelstroke",
-        "url": "http://www.revelstokemountainresort.com",
-        "airports": ["YRV", "YLW"]
-      },
-      {
-        "name": "Banff",
-        "url": "https://www.skibig3.com",
-        "airports": ["YYC"]
-      },
-      {
-        "name": "Coronet Peak",
-        "url": "https://www.nzski.com",
-        "airports": ["ZQN"]
-      },
-      {
-        "name": "Squaw Alpine",
-        "url": "http://squawalpine.com",
-        "airports": ["RNO"]
-      },
-      {
-        "name": "Sun Valley",
-        "url": "https://www.sunvalley.com",
-        "airports": ["SUN"]
-      },
-      {
-        "name": "Taos",
-        "url": "http://www.skitaos.com",
-        "airports": ["SKX", "SAF", "ABQ"]
-      },
-      {
-        "name": "Telluride",
-        "url": "http://www.tellurideskiresort.com",
-        "airports": ["TEX", "MTJ", "GJT", "DRO"]
-      },
-      {
-        "name": "Stowe",
-        "url": "https://www.stowe.com",
-        "airports": ["BTV"]
-      },
-      {
-        "name": "Thredbo",
-        "url": "https://www.thredbo.com.au",
-        "airports": ["COM", "SCB"]
-      },
-      {
-        "name": "Whistler Blackcomb",
-        "url": "https://www.whistlerblackcomb.com",
-        "airports": ["YVR"]
-      }
+      Resort.from(
+        "Snowbird",
+        "http://www.snowbird.com",
+        ["SLC"]),
+      Resort.from(
+        "Alta",
+        "http://www.alta.com",
+        ["SLC"]),
+      Resort.from(
+        "Aspen Snowmass",
+        "https://www.aspensnowmass.com",
+        ["ASE"]),
+      Resort.from(
+        "Jackson Hole",
+        "http://www.jacksonhole.com",
+        ["JAC"]),
+      Resort.from(
+        "Mammoth",
+        "http://www.mammothmountain.com",
+        ["MMH"]),
+      Resort.from(
+        "Revelstroke",
+        "http://www.revelstokemountainresort.com",
+        ["YRV",
+          "YLW"]),
+      Resort.from(
+        "Banff",
+        "https://www.skibig3.com",
+        ["YYC"]),
+      Resort.from(
+        "Coronet Peak",
+        "https://www.nzski.com",
+        ["ZQN"]),
+      Resort.from(
+        "Squaw Alpine",
+        "http://squawalpine.com",
+        ["RNO"]),
+      Resort.from(
+        "Sun Valley",
+        "https://www.sunvalley.com",
+        ["SUN"]),
+      Resort.from(
+        "Taos",
+        "http://www.skitaos.com",
+        ["SKX", "SAF", "ABQ"]),
+      Resort.from(
+        "Telluride",
+        "http://www.tellurideskiresort.com",
+        ["TEX", "MTJ", "GJT", "DRO"]),
+      Resort.from(
+        "Stowe",
+        "https://www.stowe.com",
+        ["BTV"]),
+      Resort.from(
+        "Thredbo",
+        "https://www.thredbo.com.au",
+        ["COM", "SCB"]),
+      Resort.from(
+        "Whistler Blackcomb",
+        "https://www.whistlerblackcomb.com",
+        ["YVR"])
     ];
 
     const allAirports = resorts
-      .reduce((airports, current) => airports.concat(current['airports']), []);
+      .reduce((airports, current) => airports.concat(current.airports), []);
 
-    this.resorts = resorts.concat({
-      name: 'All Locations',
-      url: '',
-      airports: Array.from(new Set(allAirports))
-    });
+    this.resorts = resorts.concat(
+      Resort.from(
+        'All Locations',
+        '',
+        Array.from(new Set(allAirports)))
+    );
   }
 }
