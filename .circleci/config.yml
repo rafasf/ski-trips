@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/ski-trips
     docker:
-      - image: node
+      - image: selenium/standalone-chrome
     steps:
       - checkout
       - run:
