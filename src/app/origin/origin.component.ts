@@ -5,11 +5,11 @@ import {Origin} from './origin';
   selector: 'origin',
   template: `
     <section class="origin">
-      <label for="origin">What is the origin?</label>
+      <label for="origin">Which airport is the origin?</label>
       <input type="text"
         name="origin"
         class="pure-input-1"
-        placeholder="JFK,LGA"
+        placeholder="eg: JFK,LGA"
         (change)="updateValue($event.target.value)" />
     </section>`
 })

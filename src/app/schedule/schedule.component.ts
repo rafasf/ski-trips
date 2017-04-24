@@ -4,18 +4,18 @@ import {Component, Output, EventEmitter} from '@angular/core';
   selector: 'schedule',
   template: `
     <section class="schedule">
-      <label for="departure-date">Departure Date</label>
+      <label for="departure-date">Leaving at</label>
       <input
         type="date"
         name="departure-date"
         class="pure-input-1"
-        (change)="changeDepartureDate($event)" />
-      <label for="return-date">Return Date</label>
+        (change)="changeDepartureDate($event.target.value)" />
+      <label for="return-date">Returning at</label>
       <input
         type="date"
         name="return-date"
         class="pure-input-1"
-        (change)="changeReturnDate($event)" />
+        (change)="changeReturnDate($event.target.value)" />
     </section>`
 })
 export class ScheduleComponent {
@@ -24,13 +24,13 @@ export class ScheduleComponent {
 
   @Output() scheduleChanged = new EventEmitter<any>();
 
-  changeDepartureDate(e) {
-    this.departureDate = e.srcElement['value'];
+  changeDepartureDate(newDate) {
+    this.departureDate = newDate;
     this.possibilyEmitChange(this.departureDate, this.returnDate);
   }
 
-  changeReturnDate(e) {
-    this.returnDate = e.srcElement['value'];
+  changeReturnDate(newDate) {
+    this.returnDate = newDate;
     this.possibilyEmitChange(this.departureDate, this.returnDate);
   }
 
