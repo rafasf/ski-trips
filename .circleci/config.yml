@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/ski-trips
     docker:
-      - image: selenium/node-chrome
+      - image: rafasf/chrome-node:7.9.0
     steps:
       - checkout
       - run:
