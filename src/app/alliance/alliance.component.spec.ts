@@ -24,7 +24,7 @@ describe('Alliance Component', () => {
     let options = alliances.children
       .map(alliance => alliance.nativeElement.textContent.trim());
 
-    expect(options).toEqual(['All', 'Oneworld', 'SkyTeam', 'Star Alliance']);
+    expect(options).toEqual(['No', 'Oneworld', 'SkyTeam', 'Star Alliance']);
   });
 
 });
