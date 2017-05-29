@@ -33,11 +33,6 @@ describe('ResortComponent', () => {
         .toEqual('resort 1');
     }));
 
-    it('shows link to the resort website', async(() => {
-      expect(fixture.debugElement.query(By.css('small')).nativeElement.textContent)
-        .toEqual('resort1.com');
-    }));
-
     it('shows the closest airports', async(() => {
       expect(fixture.debugElement.query(By.css('p')).nativeElement.textContent)
         .toContain('slc');
