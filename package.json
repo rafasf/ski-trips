@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "ng build --prod --base-href 'https://rafasf.github.io/ski-trips/' && ./node_modules/.bin/angular-cli-ghpages"
   },
   "private": true,
   "dependencies": {
