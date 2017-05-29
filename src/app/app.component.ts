@@ -6,14 +6,9 @@ import {Schedule} from './schedule/schedule';
 @Component({
   selector: 'app-root',
   template: `
-    <header class="pure-menu pure-menu-horizontal app-header">
-      <nav>
-        <span class="pure-menu-heading">Find your Flight!</span>
-      </nav>
-    </header>
     <section class="pure-form pure-form-stacked search">
-      <origin (originChanged)="updateOrigin($event)"></origin>
       <schedule (scheduleChanged)="updateSchedule($event)"></schedule>
+      <origin (originChanged)="updateOrigin($event)"></origin>
       <alliance [(alliance)]="alliance"></alliance>
     </section>
     <resorts

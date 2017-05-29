@@ -10,14 +10,15 @@ import {Resort} from './resort';
     <li
       class="resort">
       <section>
-         <h2>{{ resort.name }}</h2>
-         <a href="{{ resort.url }}"><small>{{ resort.url }}</small></a>
-         <p>Airport(s): {{ resort.airports }}</p>
+         <a href="{{ resort.url }}">
+          <h2 class="name">{{ resort.name }}</h2>
+         </a>
+         <p><small>Airport(s): {{ resort.airports }}</small></p>
       </section>
       <a
         [ngClass]="{'pure-button-disabled': !searchLink}"
         target="_blank"
-        class="pure-button pure-button-primary flight-link"
+        class="flight-link"
         href="{{ searchLink }}">See Flights</a>
     </li>`
 })

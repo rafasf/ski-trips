@@ -93,11 +93,6 @@ export class ResortsComponent {
     const allAirports = resorts
       .reduce((airports, current) => airports.concat(current.airports), []);
 
-    this.resorts = resorts.concat(
-      Resort.from(
-        'All Locations',
-        '',
-        Array.from(new Set(allAirports)))
-    );
+    this.resorts = resorts;
   }
 }

@@ -4,13 +4,13 @@ import {Component, Output, EventEmitter} from '@angular/core';
   selector: 'schedule',
   template: `
     <section class="schedule">
-      <label for="departure-date">Leaving at</label>
+      <label for="departure-date">When are you leaving?</label>
       <input
         type="date"
         name="departure-date"
         class="pure-input-1"
         (change)="changeDepartureDate($event.target.value)" />
-      <label for="return-date">Returning at</label>
+      <label for="return-date">When are you returning?</label>
       <input
         type="date"
         name="return-date"

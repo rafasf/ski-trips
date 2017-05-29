@@ -61,17 +61,29 @@ ul {
   list-style: none;
 }
 
+.resorts {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .resort {
   position: relative;
-  border-bottom: 1px solid #ddd;
+  width: 150px;
+  height: 110px;
   padding: 15px;
+  background-color: #FF851B;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.resort h2 {
+  font-weight: normal;
 }
 
 .resort .flight-link {
   position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 5px;
+  bottom: 5px;
 }
 
 .resort:hover {
