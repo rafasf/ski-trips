@@ -1,3 +1,4 @@
 # SkiTrips
 
-Attempt to make flight search easier
+* Moved to https://gitlab.com/rafasf/ski-trips
+* Deployed at https://ski-trips.herokuapp.com
